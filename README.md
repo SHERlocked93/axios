@@ -1,4 +1,4 @@
-easy-mock-template-axios
+easy-mock-api-template
 ---
 基于 axios 的接口定义模板。
 

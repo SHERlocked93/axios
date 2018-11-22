@@ -1,5 +1,5 @@
 module.exports = {
-  // host: 'http://172.16.33.105:7300/',
+  host: 'http://172.16.33.105:7300/',
   output: "../",
   template: "../",
   projects: [

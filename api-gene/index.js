@@ -129,10 +129,9 @@ const activityQueryFieldOrder = ({ turnDate }) => fetch({
 });
 
 /** 提交一个拼图 */
-const activitySaveJigsaw = ({ answerId }) => fetch({
+const activitySaveJigsaw = () => fetch({
   method: 'post',
-  url: '/activity/save-jigsaw',
-  data: { answerId }
+  url: '/activity/save-jigsaw'
 });
 
 /** 提交一个问卷 */
@@ -150,26 +149,26 @@ const activityGetActivityStatus = ({ surveyType }) => fetch({
 });
 
 export {
-  sysParamQueryByParam,   // 根据参数查询配置项 
-  sysParamSaveParam,   // 后台配置数据设置 
-  activityStart,   // 开始一个活动 
-  adminUserList,   // 查询公众号用户列表 
-  adminUserLogout,   // 用户登出 
-  adminUserNameLogin,   // web端用户登录 
-  adminUserWxLogin,   // 公众号登录 
-  questionDeleteById,   // 根据id删除问题 
-  questionEditById,   // 根据问题ID修改问题 
-  questionListByParam,   // 问题列表 
-  questionSaveQuestion,   // 新增保存问题 
-  scadaListAlarm,   // 获取大屏警报数据 
-  sysParamQueryAllParam,   // 查询所有参数配置 
-  activityGetAnswerByUser,   // 根据微信用户查询答案 
-  activityGetHongbaoFlag,   // 查询是否具有红包资格 
-  activityGetLotteryFlag,   // 查询是否具有抽奖资格 
-  activityListByParam,   // 查询答案列表 
-  activityQueryActivity,   // 查询活动实时状态-大屏使用 
-  activityQueryFieldOrder,   // 查询场次列表 
-  activitySaveJigsaw,   // 提交一个拼图 
-  activitySaveSurvey,   // 提交一个问卷 
-  activityGetActivityStatus   // 进入活动页面，查询参与信息 
+  sysParamQueryByParam,   // 根据参数查询配置项
+  sysParamSaveParam,   // 后台配置数据设置
+  activityStart,   // 开始一个活动
+  adminUserList,   // 查询公众号用户列表
+  adminUserLogout,   // 用户登出
+  adminUserNameLogin,   // web端用户登录
+  adminUserWxLogin,   // 公众号登录
+  questionDeleteById,   // 根据id删除问题
+  questionEditById,   // 根据问题ID修改问题
+  questionListByParam,   // 问题列表
+  questionSaveQuestion,   // 新增保存问题
+  scadaListAlarm,   // 获取大屏警报数据
+  sysParamQueryAllParam,   // 查询所有参数配置
+  activityGetAnswerByUser,   // 根据微信用户查询答案
+  activityGetHongbaoFlag,   // 查询是否具有红包资格
+  activityGetLotteryFlag,   // 查询是否具有抽奖资格
+  activityListByParam,   // 查询答案列表
+  activityQueryActivity,   // 查询活动实时状态-大屏使用
+  activityQueryFieldOrder,   // 查询场次列表
+  activitySaveJigsaw,   // 提交一个拼图
+  activitySaveSurvey,   // 提交一个问卷
+  activityGetActivityStatus   // 进入活动页面，查询参与信息
 };
