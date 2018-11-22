@@ -10,3 +10,5 @@ npm run create-api
 Documentation
 ---
 [帮助文档](https://easy-mock.github.io/easy-mock-cli/)
+
+[原版Github文档](https://github.com/easy-mock/easy-mock-cli/blob/master/docs/README.md)

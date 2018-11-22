@@ -19,7 +19,8 @@ exports.convertMethod = function (mock) {
 };
 
 exports.convertParam = function (mock) {
-  return Object.keys(mock.parameters).join(', ');
+  const params = JSON.parse(mock.parameters)
+  return params.map(T => T.name).join(', ');
 };
 
 exports.joinUrl = function () {

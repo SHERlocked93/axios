@@ -1,10 +1,10 @@
 module.exports = {
-  host: 'http://172.16.33.105:7300/',
+  // host: 'http://172.16.33.105:7300/',
   output: "../",
   template: "../",
   projects: [
     {
-      id: "5bac98f8e601397037c2c862",
+      id: "5bf685b69254fa05b2386b8d",
       name: "api-gene"
     }
   ]
