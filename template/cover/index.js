@@ -1,15 +1,12 @@
-import instance from './instance';
-import { convertRESTAPI } from '{{$$.relative("util")}}';
+import fetch from 'utils/fetch';
 
 <% _.forEach(data.mocks, function(mock){ %>/** {{mock.description}} */
-function {{$$.convertMethod(mock)}}(opts) {
-  return instance({
-    method: '{{mock.method}}',
-    url: <% if($$.isREST(mock.url)) {%>convertRESTAPI('{{mock.url}}', opts)<%} else {%> '{{mock.url}}'<% } %>,
-    opts: opts
-  });
-}
+const {{$$.convertMethod(mock)}} = (opts) => fetch({
+  method: '{{mock.method}}',
+  url: '{{mock.url}}',
+  {{mock.method === 'get' ? 'params' : 'data'}}: opts
+});
 
 <% }) %>export {<% _.forEach(data.mocks, function(mock, i){ %>
-  {{$$.convertMethod(mock)}}<% if(data.mocks.length - 1 !== i) { %>,<% } %><% }) %>
+  {{$$.convertMethod(mock)}}<% if(data.mocks.length - 1 !== i) { %>,<% } %>   // {{mock.description}} <% }) %>
 };
