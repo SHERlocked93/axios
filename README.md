@@ -9,7 +9,7 @@ npm run create-api
 
 ```替换
 // 原 （打开正则
-"code":\{"type":"string","required":false,"description":"[\w\d\u4e00-\u9fa5]*"
+"code":\{"type":"\w*"(,"format":"int32")?,"required":(false|true),"description":"[\w\d\u4e00-\u9fa5]*"
 
 
 // 改成
