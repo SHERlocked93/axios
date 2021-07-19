@@ -7,6 +7,18 @@ easy-mock-api-template
 npm run create-api
 ```
 
+```替换
+// 原 （打开正则
+"code":\{"type":"string","required":false,"description":"[\w\d\u4e00-\u9fa5]*"
+
+
+// 改成
+"code":{"enum":"1","default":20000,"type": "integer","format": "int32","required": false,"description": ""
+
+// 源码地址
+// https://github.com/easy-mock/swagger-parser-mock/blob/e11799c8aa/lib/index.js
+```
+
 Documentation
 ---
 [使用API自动生成工具优化前端工作流 \- 掘金](https://juejin.im/post/5bf6b4806fb9a049ae07884a)
